@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>RECETTE PORC AU CURRY, RECETTE PORC AU CURRY, PLAT </title>
+	<meta name="Description" content="Préparation de la recette Porc au curry : Dans une grande jatte, mélangez le contenu d’un pot de yaourt, le curry, l’ail e... Recettes " /> 
+	<meta name="keywords" content="Porc au curry, 1 rôti de porc coupé en tranches puis en cubes, 1 yaourt nature à 0%, 2 cuillères à café de curry en poudre, Ail en poudre, Jus de citron, 3 tomates, 1 oignon, 1 bâton de cannelle, 2 carottes, 1 poivron rouge, ½ ananas, Sel, poivre, 1 feuille de laurier, recette" />
+	<meta name="Subject" content="Recette Porc au curry" />
+		<link href='../commun.css' rel='stylesheet' type='text/css' /><link href='../certiferme.css' rel='stylesheet' type='text/css' /><script type='text/javascript' src='../ajax.js'></script><script type='text/javascript' src='../bibliotheque/jquery.js'></script><script type='text/javascript' src='../bibliotheque/jquery.timers-1.2.js'></script><script type='text/javascript' src='../bibliotheque/jani/jani.js'></script><script type='text/javascript' src='../bibliotheque/jquery.fancybox-1.3.0/fancybox/jquery.fancybox-1.3.0.pack.js'></script><link href='../bibliotheque/jquery.fancybox-1.3.0/fancybox/jquery.fancybox-1.3.0.css' rel='stylesheet' type='text/css' />	<script type='text/javascript'>
+		$(function(){
+			//Liste de mots à vérifier dans le contenu de la page
+			//var wordList = ['farine',  'pain', 'pâte à tarte', 'sablées?', 'feuilletées?', 'brisées?', 'cupcakes?', 'crêpes?', 'gaufres?', 'choux', 'pizzas?', 'crumble', 'pancakes?'];
+			var wordList = ['gâteaux?', 'cookies?', 'muffin', 'cupcakes?', 'cake', 'chocolat', 'framboise', 'farine', 'dessert'];
+			//Expression régulière qui joint les entrées du tableau afin de les trouver dans le contenu du corps
+	        var regExp = new RegExp("\\b" + wordList.join("\\b|\\b") + "\\b", "gi");
+
+			var nb_occurence = 0;
+			
+			$('*', '#CORPS')
+		        .andSelf()
+		        .contents()
+		        //Filtre qui permet de continuer seulement s'il s'agit d'un bloc de texte
+		        .filter(function(){
+		            return this.nodeType === 3;
+		        })
+		        //Filtre qui permet de continuer seulement si un des mots recherchés correspond
+		        .filter(function(){
+		            return this.nodeValue.match(regExp);
+		        })
+		        //Pour chaque succès de l'expression régulière, on peut manipuler le noeud de texte correspondant au match
+		        .each(function(){
+		            //console.log(this.nodeValue);
+		            nb_occurence++;
+		        });
+
+			if(nb_occurence > 0){
+				$('.sub_ad_leaderboard .no_match').remove();
+				$('.sub_ad_leaderboard .match').show();
+
+				$('.div_pub_300 .no_match').remove();
+				$('.div_pub_300 .match').show();
+			}
+			else{
+				$('.div_pub_300 .match').remove();
+				$('.div_pub_300 .no_match').show();
+
+				$('.sub_ad_leaderboard .match').remove();
+				$('.sub_ad_leaderboard .no_match').show();
+			}
+		});
+	</script>
+		<script type='text/javascript' src="../fonctions.js"></script>
+	<script type='text/javascript' src="../ajax.js"></script>
+	<script type='text/javascript' src="../bibliotheque/jquery-ui-1.7.2.custom.min.js"></script>
+	<script type='text/javascript' src="../bibliotheque/jquery.ui.stars-2.1/ui.stars.min.js"></script>
+	<link href="../bibliotheque/jquery.ui.stars-2.1/ui.stars.min.css" rel="stylesheet" type="text/css" />
+	<script type='text/javascript' src="../bibliotheque/jquery.jcarousel.pack.js"></script>
+	<link href="../bibliotheque/jquery.jcarousel.css" rel="stylesheet" type="text/css" />
+	<link href="../jcarousel_skin_recette.css" rel="stylesheet" type="text/css" />
+	<script type='text/javascript' src="fonctions.js"></script>
+	<script type='text/javascript'>
+				
+		
+		$(document).ready(function() {
+							init_form_newsletter_fancybox();
+									
+			/*$('#star_recette').stars({
+				cancelShow: false,
+				oneVoteOnly: true,
+				callback: function(ui, type, value){
+					enreg_note_recette(7138, value);
+				}
+			});*/
+			
+			init_bannieres_pub('..', 'recette', 'recette');
+			
+						
+			$('#champ_mots_cle').focus(function(){
+				if($(this).val() == 'Mots-clés'){
+					$(this).val('').css('color', 'black');
+				}
+			}).blur(function(){
+				if($.trim($(this).val()) == ''){
+					$(this).val('Mots-clés').css('color', '#7f7f7f');
+				}
+			});
+			$('form[name=astuce] .bouton').click(function(){
+				if($('#champ_mots_cle').val()=='Mots-clés'){
+					$('#champ_mots_cle').val('');
+				}
+			});
+		});
+		
+		var itrRubrique = "recette";
+		var itrSousRubrique = "Plat";
+		var itrKeywords = "porc,curry";
+		(function() {
+			var itr = document.createElement('script'); itr.type = 'text/javascript'; itr.async = true; itr.src = 'http://www.iterroir.fr/js/certibootstrap.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(itr, s);
+		})();
+	</script>
+	<style type='text/css'>
+		.menu_cadre_vert li p, .cadre_vert_content li p {
+			display: inline;
+			margin:0;
+		}
+	</style>
+	</head>
+
+<body><div id="GLOBAL">
+		<div id='formulaire_newsletter_fancy' style='display:none'>
+		<div style="color:#FF7B00;font-size:16px">Inscrivez-vous à notre newsletter mensuelle...</div>
+		<br /><span style="font-size:14px;color:#94B610">...et découvrez nos recettes par thèmes, <br />nos astuces jardin, les actus du village...</span><br /><br />
+		<form id="formulaire_nl_popup_recette" action="javascript: enregistrer_mail_newsletter('..', 'champ_mail_newsletter_recette', 'fancybox', 'champ_prenom_newsletter_recette', 'champ_age_newsletter_recette')" method="post">
+		<table cellpadding=2 cellspacing=0 style="text-align:left;margin-left:30px">
+			<tr>
+				<td style='padding:2px;font-size:12px'>E-mail *</td>
+				<td style='padding:2px'><input type="text" name="mail" value="" id="champ_mail_newsletter_recette" style="width:180px;font-size:12px" /></td>
+			</tr>
+			<tr>
+				<td style='padding:2px;font-size:12px'>Prénom</td>
+				<td style='padding:2px'><input type="text" value="" id="champ_prenom_newsletter_recette" style='width:180px' /></td>
+			</tr>
+			<tr>
+				<td style='padding:2px;font-size:12px'>Age</td>
+				<td style='padding:2px'>
+					<input type="text" value="" id="champ_age_newsletter_recette" style='width:30px' maxlength=3 /> 
+					&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Je m'inscris" style='font-size:11px' /> 
+					<span style='color:#8f8f8f'>&nbsp;&nbsp;&nbsp;* obligatoire</span>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</div>
+			  		<!--<div id='global_fond_blanc'></div>-->
+	<div id="ENTETE">
+		<a style="position:absolute;display:block;border:0;left:0;top:0;width:136px;height:99px" href="../index.php"></a>
+		<a style="position:absolute;display:block;border:0;right:10px;top:15px;width:75px;height:60px" href="../tele_du_village/index.php"></a>
+		<div id='bandeau_liens_utiles' style='width:200px'>
+			<div style='float:left;margin-left:3px'>
+				<!-- Place this tag in your head or just before your close body tag -->
+<!--				<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+				  {lang: 'fr'}
+				</script>-->
+				<!-- Place this tag where you want the +1 button to render -->
+				<!--<g:plusone size="small"></g:plusone>-->
+			</div>
+			<div style='float:right'>
+				<a href='../forum/index.php'>Forum</a> - 
+				<a href='../contact.php'>Contact</a> - 
+				<a href='../partenaires.php'>Partenaires</a> - 
+				<a href='../presse/communiques.php'>Presse</a>
+			</div>
+		</div>
+		
+		<div id="MENU" style="left:130px">
+			<!--<div class="link1"><a href="../eleveur/ma_ferme.php">Ma ferme</a></div>-->
+			<div class="onglet_actif"><a href="../recette/livre_recette.php">Mes recettes</a></div>
+			<div class="link4"><a href="../jardin/astuces-et-conseils-de-jardinage.html">Mon jardin</a></div>
+			<div class="link3"><a href="../sante/actualites-sante.html">Mon bien être</a></div>
+			<div class="link6"><a href="../ecole/annuaire-ecoles-professionnelles.html">Mes écoles</a></div>
+			<div class="link7"><a href="../mon_blog/les-blogs-certiferme.html">Mon blog</a></div>
+<!--			<div class="link8"><a href="../fetes/recettes-de-reveillon.html" class='onglet_noel'>Fêtes 2012 !</a></div>-->
+		</div>
+	</div>
+	<div id="bande_sous_menu">
+		<div style='padding:5px'>
+			<form method="post" name="formulaire_nl_bandeau" action="javascript:enregistrer_mail_newsletter('..', 'champ_mail_newsletter_bandeau', 'popup')" class='form_nl_bandeau'>
+				<span class='middle'>Pour recevoir nos idées recettes :</span>
+				<input type="text" class='input_text_nl middle' value="Saisissez votre email !" name="mail" id='champ_mail_newsletter_bandeau' onclick="javascript:if(this.value=='Saisissez votre email !'){this.value=''}" />
+				<input type="submit" value="Valider" class='middle bouton' />
+			</form>
+			<div id='liens_pratique_sous_menu'>
+									<a href="javascript:ajouter_aux_favoris();"><img src='../imgs/contenu/ico_bookmark_16.gif' style='border:0' title="Ajouter Certi'Ferme à mes favoris" /></a>&nbsp;&nbsp;
+								<a href="../certiferme_dernieres_recettes.xml"><img src='../imgs/contenu/ico_rss_16.gif' style='border:0' title="S'abonner aux dernières recettes Certi'Ferme" /></a>
+			</div>
+		</div>
+			</div>
+	
+	  	  	<div id="COL-GAUCHE" style='z-index:0;'>
+  		<div class='bloc_colonne bloc_colonne_gauche'>
+			<div class='sous_bloc_colonne'>
+	  			<h3>Connexion</h3><a onclick='javascript:init_form_identification("..", "", "1");' class='liste cliquable'>Me connecter</a>  			</div>
+  		</div>
+  		
+  		<div class='bloc_colonne bloc_colonne_gauche'>
+			<div class='sous_bloc_colonne'>
+				<h3>Je participe !</h3>
+								<a href="../recette/ajout/ajout_recette_perso.php" class='liste'>Je propose une recette</a><br />
+				<a href="../recette/ajout/ajout_astuce_perso.php" class='liste'>Je propose une astuce</a>
+				<br /><br />
+									<a onclick="javascript:init_form_identification('..', 'recette/mon-livre-de-recettes.html');" class='liste cliquable'>Mon livre recettes</a><br />
+					<a onclick="javascript:init_form_identification('..', 'recette/mon-livre-de-jardinage.html');" class='liste cliquable'>Mon livre jardin</a><br />
+					<a onclick="javascript:init_form_identification('..', 'recette/mon-livre-sante.html');" class='liste cliquable'>Mon livre bien-être</a>
+								<br /><br />
+									<a href="../mon_blog/ajout/inscription.php" class='liste mettre_en_valeur'>Je crée mon blog !</a><br />
+							</div>
+		</div>
+		
+		<div class='bloc_colonne bloc_colonne_gauche'>
+			<div class='sous_bloc_colonne'>
+				<h3>Nos recettes</h3>				
+				<a href="../recette/livre_recette.php?type=5&recherche_avancee=1" class='liste'>Apéritifs, amuses bouche</a><br />
+				<a href="../recette/livre_recette.php?type=1&recherche_avancee=1" class='liste'>Entrées</a><br />
+				<a href="../recette/livre_recette.php?type=2&recherche_avancee=1" class='liste'>Plats</a><br />
+				<a href="../recette/livre_recette.php?type=3&recherche_avancee=1" class='liste'>Desserts</a><br /><br />
+				<a href="../recette/ajout/ajout_recette_perso.php" class='liste mettre_en_valeur'>Je propose une recette</a>
+			</div>
+		</div>
+		
+				
+   		   		
+   		<div style='width:120px;margin-left:10px'>
+   			   				<script type='text/javascript'>
+					<!--//<![CDATA[
+					   document.MAX_ct0 ='';
+					   var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+					   var m3_r = Math.floor(Math.random()*99999999999);
+					   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					   document.write ("zoneid=46909");document.write("&amp;nodis=1");
+					   document.write ('&amp;cb=' + m3_r);
+					   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+					   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					   document.write ("&amp;loc=" + escape(window.location));
+					   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+					   if (document.context) document.write ("&context=" + escape(document.context));
+					   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+					       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+					   }
+					   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+					   document.write ("'></scr"+"ipt>");
+					//]]>-->
+				</script>
+	   		   		</div>
+   		
+   				
+		<div style="position:relative;margin-left:0;margin-top:20px;text-align:center">
+			<a href='http://www.iterroir.fr' target='_blank' style='text-decoration:none;border:0'>
+				<span style='font-size:20px;color:#E72D5F;font-style:italic'>Visitez iTerroir</span>
+				<img src="../imgs/it_logo_size_2.png" alt="Visitez iTerroir" style='border:0' />
+			</a>
+		</div>
+		
+		<div style="position:relative;margin-left:0;margin-top:20px;">
+			<img src="../imgs/cadre_visite_certiferme.jpg" border="0" usemap="#visite_site">
+			<MAP NAME="visite_site"><area SHAPE="rect" COORDS="0,0,140,105" HREF="http://www.fermadour.com"></MAP>
+		</div>
+	
+				
+		<div style="clear:both">&nbsp;</div>
+  	</div>  	
+	  	<div id="COL-DROITE">
+		<div style="height:15px"></div>
+	<div class='bloc_colonne  bloc_colonne_sans_bg' style="">
+		<div class='sous_bloc_colonne'>
+	<div id='itrWidget2'></div>		</div>
+	</div>
+	<div class='bloc_colonne  ' style="">
+		<div class='sous_bloc_colonne'>
+				<h3>Suivez-nous sur :</h3>
+			<div style='text-align:center'>
+				<div style='font-size:5px'>&nbsp;</div>
+				<a href="https://www.facebook.com/iTerroir" target='_blank'><img src="../imgs/contenu/ico_col_droite_facebook.png" style='border:0' title="Certi'Ferme sur Facebook" class='middle' /></a>
+				&nbsp;&nbsp;&nbsp;
+				<a href="http://twitter.com/iterroir" target='_blank'><img src="../imgs/contenu/ico_col_droite_twitter.png" style='border:0' title="Certi'Ferme sur Twitter" class='middle' /></a>
+				&nbsp;&nbsp;&nbsp;
+				<a rel="publisher" href="https://plus.google.com/s/iterroir" target='_blank'><img src="../imgs/contenu/ico_col_droite_google+.png" style='border:0' title="Certi'Ferme sur Google+" class='middle' />&nbsp;</a>
+			</div>
+					</div>
+	</div>
+	<div class='bloc_colonne  ' style="">
+		<div class='sous_bloc_colonne'>
+					<div id='ENTETE'><h3>Inscrivez-vous à la newsletter</h3></div>
+			<form method="post" name="formulaire_nl" action="javascript:enregistrer_mail_newsletter('..', 'champ_mail_newsletter_gauche', 'popup')">
+				<input type="text" class='input_text_nl middle' value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Votre email" name="mail" id='champ_mail_newsletter_gauche' onfocus="$(this).val('').css('background','#fff')" />
+				<input type="submit" value="OK" />
+			</form>
+				</div>
+	</div>
+	<div class='bloc_colonne  bloc_colonne_sans_bg' style="">
+		<div class='sous_bloc_colonne'>
+	<div class='center' style='position:relative;left:-3px'>						<script type='text/javascript'>
+                        <!--//<![CDATA[
+                           document.MAX_ct0 ='';
+                           var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+                           var m3_r = Math.floor(Math.random()*99999999999);
+                           document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+                           document.write ("zoneid=104021");document.write("&amp;nodis=1");
+                           document.write ('&amp;cb=' + m3_r);
+                           if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+                           document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+                           document.write ("&amp;loc=" + escape(window.location));
+                           if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+                           if (document.context) document.write ("&context=" + escape(document.context));
+                           if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+                               document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+                           }
+                           if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+                           document.write ("'></scr"+"ipt>");
+                        //]]>--></script>
+									<!--script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/fr_FR"></script><script type="text/javascript">FB.init("2f417aa092ff5733f5cd7b4b02b74a48");</script><fb:fan profile_id="235204036867" stream="0" connections="0" logobar="0" width="155" height='80'></fb:fan><div style="font-size:8px;"></div-->			
+			</div>
+				</div>
+	</div>
+	<div class='bloc_colonne  ' style="">
+		<div class='sous_bloc_colonne'>
+		<div id='ENTETE'><h3>Actus du village</h3></div>
+					<h4 style="font-style:italic;font-size:12px;font-weight:normal" class="h4_actus_village"><a href="http://www.recettes-sans-allergenes.fr/"  target='_blank' >Trouvez des recettes sans allergènes !</a></h4>
+					<br />
+									<h4 style="font-style:italic;font-size:12px;font-weight:normal" class="h4_actus_village"><a href="http://www.iterroir.fr/produits-du-terroir/selection/thon-blanc-omega-3-bonne-humeur/807"  target='_blank' >Le thon blanc : oméga3 et bonne humeur</a></h4>
+					<br />
+									<h4 style="font-style:italic;font-size:12px;font-weight:normal" class="h4_actus_village"><a href="http://www.iterroir.fr/quiz/quiz-ingredients-interdits-allergie-gluten/813"  target='_blank' >Quiz : l'alimentation sans gluten</a></h4>
+					<br />
+									<h4 style="font-style:italic;font-size:12px;font-weight:normal" class="h4_actus_village"><a href="http://www.iterroir.fr/sante-bien-etre/remedes/cinq-remedes-de-grand-mere-a-base-d-oignon/538"  target='_blank' >Santé : 5 remèdes à base d'oignon</a></h4>
+					<br />
+						</div>
+	</div>
+		
+  	</div>
+  
+  <div id="CORPS">
+  	<div id='conteneur_banniere_centre'><div class='banniere_adsense_haut'><script type='text/javascript'><!--//<![CDATA[
+					var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php':'http://cas.criteo.com/delivery/ajs.php');
+					var m3_r = Math.floor(Math.random()*99999999999);
+					if (!document.MAX_used) document.MAX_used = ',';
+					document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+					document.write ('?nodis=1&amp;zoneid=14864');
+					document.write ('&amp;cb=' + m3_r);
+					if (document.MAX_used != ',') document.write ('&amp;exclude=' + document.MAX_used);
+					document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+					if (document.referrer) document.write ('&amp;referer=' + escape(document.referrer));
+					if (document.context) document.write ('&context=' + escape(document.context));
+					if (document.mmm_fo) document.write ('&amp;mmm_fo=1');
+					document.write ("'><\/scr"+"ipt>");
+				//]]>--></script></div></div>
+  
+  			<div id="TITRE-MARRON"  style='height:30px'>
+			<h2 style='margin-left:20px;font-size:20px'><a href="http://www.certiferme.com/recette/recettes-de-cuisine.html" class="h1">Mes recettes de cuisine</a></h2>
+					</div>
+			<div id="BLOC-MENU">
+		<ul id="nouveau_sous_menu">
+							<li  >
+					<a href="trouver-une-recette.html"  id="sous_onglet_selectionne">
+						Les recettes					</a>
+				</li>
+							<li  >
+					<a href="astuces-de-cuisine.html"  >
+						Les astuces					</a>
+				</li>
+							<li  >
+					<a href="recettes-video.html"  >
+						Les recettes vidéo					</a>
+				</li>
+							<li  >
+					<a href="la-selection-des-menus.html"  >
+						Les menus					</a>
+				</li>
+							<li  class="dernier_onglet_sous_menu">
+					<a href="les-cours-de-cuisine.html"  >
+						Les cours de cuisine					</a>
+				</li>
+					</ul>
+	</div>
+		
+	<!-- CAROUSEL POUR LES RECETTES -->
+		
+		<div itemscope itemtype="http://schema.org/Recipe">
+	<div id="BLOC-CONTENU" style="margin-top:0px;margin-bottom:10px;">
+		<div id="BLOC-VERTFONCE">
+			<div style='margin: 0 0 10px 0; text-align:left;background:#B0C72E;border:0' class='round10'>
+				<div style='padding:2px 3px'>
+					<a href="recette-roule-de-dinde-farci-7160.html" style='float:right;color:#fff'>suivante &gt;&gt;</a>					<a href="recette-poulet-aux-aubergines-et-legumes-7128.html" style='float:right;margin-right:10px;color:#fff'>&lt;&lt; précédente</a>					<a href="livre_recette.php?" style='color:#fff'>&lt; Retour à la liste</a>
+				</div>
+			</div>
+			<h1 class="titrepagevert" style="width:100%;top:0;left:0;font-size:20px;color:#324118"><span itemprop="name">Porc au curry</span></h1>
+			<div class="clearboth"></div>
+		</div>
+		
+					<table cellpadding=0 cellspacing=0 style="font-size:11px;margin-top:0px;" border='0'>
+				<tr>
+					<td rowspan='2'></td>
+					<td style='color:#9f9f9f; font-size:11px'>
+						<span style='color:#5f5f5f'>Proposée par <span style='font-weight:bold'>Hélène faba</span></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href='livre_recette.php?recette_inscrit=547' style='color:#9f9f9f;text-decoration:none'>&gt; Voir ses recettes</a>					</td>
+				</tr>
+			</table>
+				<div style='width:100%;padding:0;margin: 15px 0'>
+			<div style='float:left;margin:0'>
+								<a style="color:#5f5f5f;font-size:12px;text-decoration:none" target='_blank' href='impression_recette.php?id_recette=7138'>
+					<img src="../imgs/contenu/ico_imprimer.gif" style="width:16px;height:16px;border:0;position:relative;top:2px;margin-right: 3px" />Imprimer
+				</a>&nbsp;
+				<a style="color:#5f5f5f;font-size:12px;text-decoration:none" href="demande_envoi_ami.php?id_recette=7138">
+					<img src="../imgs/contenu/ico_envoyer.gif" style="width:16px;height:16px;border:0;position:relative;top:2px;margin-right: 3px" />Envoyer
+				</a>&nbsp;
+				<a style="color:#5f5f5f;font-size:12px;text-decoration:none" href="mon_livre_recette_connexion.php?id_recette_select=7138">
+					<img src="../imgs/contenu/ico_enregistrer.gif" style="width:16px;height:16px;border:0;position:relative;top:2px;margin-right: 3px" />Mon livre
+				</a>&nbsp;
+			</div>
+			<div style='float:right;margin-top:-3px'>	<table cellpadding=0 cellspacing=0 style='margin:5px 0 0 5px'>
+		<col width='110px' />
+		<col />
+		<col width='110px' />
+		<tr>
+			<td><a name="fb_share" type="button_count" share_url="http://www.certiferme.com/recette/recette-10596-chou-rouge-aux-pommes-et-sauciss%3Cbr%20/les-commentaires-de-la-recette-porc-au-curry-7138.html"></a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script></td>
+			<td>&nbsp;</td>
+			<td><a href="http://twitter.com/share" class="twitter-share-button" data-url="https://tinyurl.com/2v45hd3" data-text="Porc au curry" data-count="horizontal" data-via="certiferme" data-lang="fr">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></td>
+		</tr>
+	</table></div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+	<div id='div_choix_mode_impression' style='display:none'>
+		<form name='form_impression' id='form_impression' action="impression_recette.php" onsubmit="return true" method='get' target='_blank'>
+			<span style='font-size:14px;color:#FF9900'>Mode d'impression de la recette :</span><br /><br />
+			<label><input type='radio' name='mode_impression' value='avec' checked='checked' style='vertical-align:middle' /> <span style='vertical-align:middle'>Avec photo</span></label><br />
+			<label><input type='radio' name='mode_impression' value='sans' style='vertical-align:middle' /> <span style='vertical-align:middle'>Sans photo</span></label><br /><br />
+			<input type='submit' value='Imprimer la recette' />
+			<input type='hidden' name='id_recette' value='7138' />
+		</form>
+	</div>
+		
+	<div id="BLOC-CONTENU" style='padding:0;margin-bottom:0'>
+
+		<div class='cadre_jaune' style="border:0;float:left;width:210px;">
+			<div class="cadre_jaune_content" style='border:0;padding:0;position:relative;'>
+				<table cellpadding='0' cellspacing='0' style='width:100%;' border='0'>
+					<tr>
+						<td align='left' valign='top'>
+						<!-- GIF ANIME ou PHOTO RECETTE -->
+							<img src='../imgs/contenu/ico_ajouter_photo_vide.gif' style='border:0' />						</td>
+					</tr>
+				</table>
+							</div>
+		</div>
+	
+		<div id='cadre_recherche_vert_petit' style='float:right;'>
+			<div class='sub'>
+				<form name="astuce" action="livre_recette.php" method='get' style='margin-top:10px !important;margin-top:15px' onsubmit="javascript:return verif_form_recherche_recette()">
+					<input type='hidden' name='recherche' value=1 />
+					<h4>Rechercher une recette :</h4>
+					<div style='margin-top:6px'>
+						<input type="text" name="mots_cle" id="champ_mots_cle" value="Mots-clés" maxlength='35' style='color:#7f7f7f;width:180px;vertical-align:middle' />
+						<input type="submit" value="OK" style='vertical-align:middle' />
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div class='cadre_jaune' style='float:right;width:250px;margin-top:10px'>
+			<div class="cadre_jaune_top_left"></div>
+			<div class="cadre_jaune_top_right"></div>
+			<div class="cadre_jaune_bottom_right"></div>
+			<div class="cadre_jaune_bottom_left"></div>
+			<div class="cadre_jaune_content" style='padding-bottom:0'>
+				<!-- <h3 style='margin-bottom:0'>Description</h3>  -->
+				<table style='width:100%;margin-top:5px' cellpadding=0 cellspacing=0>
+					<col width='25%' />
+					<col width='25%' />
+					<col width='28%' />
+					<tr>
+						<td colspan=4><h2 style='font-size:12px;color:#000000;display:inline-block;font-weight:normal'><span itemprop="recipeCategory">Plat</span></h2></td>
+					</tr>
+					<tr>
+						<td class='texte'><span style='color:#7F7F7F'>Difficulté : </span></td>
+						<td class='texte'><span style='color:#000000'>Moyen</span></td>
+						<td class='texte'><span style='color:#7F7F7F'>Préparation : </span></td>
+						<td class='texte'><span style='color:#000000'><meta itemprop="prepTime" content="PT30M">30 min</span></td>
+					</tr>
+					<tr>
+						<td class='texte'><span style='color:#7F7F7F'>Cuisson : </span></td>
+						<td class='texte'><span style='color:#000000'><meta itemprop="cookTime" content="PT45M">45 min</span></td>
+						<td class='texte'><span style='color:#7F7F7F'>Pour : </span></td>
+						<td class='texte'><span style='color:#000000'>5 pers</span></td>
+					</tr>
+					<tr><td colspan=3 style='font-size:5px'>&nbsp;</td></tr>
+				</table>
+			</div>
+		</div>
+		
+		<div style="clear:both"></div>
+
+	</div>
+			
+	
+	<div id="BLOC-CONTENU">	
+		<div class='cadre_vert' style="width:100%;margin-top:15px">
+			<div class="cadre_vert_top_left"></div>
+			<div class="cadre_vert_top_right"></div>
+			<div class="cadre_vert_bottom_right"></div>
+			<div class="cadre_vert_bottom_left"></div>
+			<div class="cadre_vert_content">				
+				<h3 style='width:150px'>Ingrédients</h3>
+				<div style='float:left;width:49%'>
+					<ul class='menu_cadre_vert'>
+						<li><span itemprop="ingredients">1 rôti de porc coupé en tranches puis en cubes</span></li><li><span itemprop="ingredients">1 yaourt nature à 0% </span></li><li><span itemprop="ingredients">2 cuillères à café de curry en poudre   </span></li><li><span itemprop="ingredients">Ail en poudre    </span></li><li><span itemprop="ingredients">Jus de citron   </span></li><li><span itemprop="ingredients">3 tomates      </span></li><li><span itemprop="ingredients">1 oignon </span></li><li><span itemprop="ingredients">1 bâton de cannelle</span></li><li><span itemprop="ingredients">2 carottes    </span></li><li><span itemprop="ingredients">1 poivron rouge     </span></li><li><span itemprop="ingredients">½ ananas</span></li><li><span itemprop="ingredients">Sel, poivre</span></li><li><span itemprop="ingredients">1 feuille de laurier</span></li>					</ul>
+				</div>
+				<div style='float:right;width:49%;vertical-align:top'>
+					<div id="itrWidget1"></div>
+				</div>
+				<div style='clear:both;'></div>
+			</div>
+		</div>
+		
+				
+		
+		<div class='cadre_vert' style="width:100%;margin-top:15px" id='cadre_preparation'>
+			<div class="cadre_vert_top_left"></div>
+			<div class="cadre_vert_top_right"></div>
+			<div class="cadre_vert_bottom_right"></div>
+			<div class="cadre_vert_bottom_left"></div>
+			<div class="cadre_vert_content">
+				<h3>Préparation</h3>
+				<div itemprop="recipeInstructions">
+    				<ul class='menu_cadre_vert'>
+    					<li>Dans une grande jatte, mélangez le contenu d’un pot de yaourt, le curry, l’ail et le jus du 1/2 citron. </li><li>Coupez la viande en gros cubes et ajoutez-les à la préparation précédente, mélangez et laissez macérer une heure au frais.  </li><li>Dans un poêle ou un wok, faites revenir sans graisses les oignons pelés et émincés, le laurier et la cannelle. </li><li>Faites-les revenir à feu doux quelques instants puis ajoutez la viande et faites-la revenir 2 à 3 minutes toujours à feu doux en remuant à la cuillère en bois.  </li><li>Ajoutez les carottes coupées en bâtons, les tomates ébouillantées 1 minute, pelées et coupées en quatre et le poivron épépiné puis coupé en morceaux. </li><li>Salez, poivrez.</li><li>Laissez mijoter à couvert pendant 20 minutes.        </li><li>Pelez l’ananas, coupez-le en cubes, ajoutez-le dans le wok ainsi que la poignée de raisins secs.  </li><li>Poursuivez la cuisson encore 10 minutes.  </li><li>C'est prêt.</li>    				</ul>
+				<div style="clear:both"></div>
+    			</div>
+			</div>
+		</div>
+		
+				
+
+		<!-------------------------------->
+		<!-- COMMENTAIRES DES RECETTES --->
+		<!-------------------------------->
+		<a href="#" id='cadre_commentaires'></a>
+					<div class='cadre_vert' style="width:100%;margin-top:15px">
+				<div class="cadre_vert_top_left"></div>
+				<div class="cadre_vert_top_right"></div>
+				<div class="cadre_vert_bottom_right"></div>
+				<div class="cadre_vert_bottom_left"></div>
+				<div class="cadre_vert_content">
+					<a href="javascript:afficher_formulaires_commentaire('ident', 7138, 'recette-10596-chou-rouge-aux-pommes-et-sauciss%3Cbr%20/les-commentaires-de-la-recette-porc-au-curry-7138.html');;" 
+							style="float:right; margin:7px 0 0 0; cursor:pointer; color:#333333; font-size:13px; font-weight:bold; padding:2px" >
+					<b style='color:#FCA103; font-size:14px'>+</b> Ajouter un commentaire</a>
+					<h3 style='width:300px'>0 commentaire</h3>
+					<meta itemprop="interactionCount" content="UserComments:0" />
+							<table width='98%' cellspacing='0' style='margin:5px 0 0 0;'>
+			<tr>
+				<td>
+					<p style='color:#5f5f5f'>Aucun commentaire n'est lié à cette recette</p>
+				</td>
+			</tr>
+		</table>
+						<div style="clear:both"></div>
+				</div>
+			</div>
+					
+		<div id="div_formulaires_commentaire">&nbsp;</div>
+		<!------------------------------------>
+		<!-- FIN COMMENTAIRES DES RECETTES --->
+		<!------------------------------------>
+			</div>
+
+ 	
+	
+	
+		
+		
+	<!-------------------------------->
+	<!-- AUTRES RECETTES ASSOCIEES --->
+	<!-------------------------------->
+			
+		<div id="BLOC-CONTENU">
+			<div class='cadre_jaune' style="width:100%;margin-top:15px">
+				<div class="cadre_jaune_content">
+					<h3>Suggestions : 10 recettes similaires</h3>
+					<table>
+						<tr><td align='center'><p><a href='recette-cotelettes-de-porc-et-carottes-au-four-16478.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-cotelettes-de-porc-et-carottes-au-four-16478.html'>Côtelettes de Porc et Carottes au Four</a></p></td></tr><tr><td align='center'><p><a href='recette-tajine-express-au-porc-et-olives-21675.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-tajine-express-au-porc-et-olives-21675.html'>Tajine Express au Porc et Olives</a></p></td></tr><tr><td align='center'><p><a href='recette-roti-de-porc-a-la-tapenade-et-moutarde-34517.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-roti-de-porc-a-la-tapenade-et-moutarde-34517.html'>Rôti de Porc à la Tapenade et Moutarde</a></p></td></tr><tr><td align='center'><p><a href='recette-pommes-de-terre-au-lard-31778.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-pommes-de-terre-au-lard-31778.html'>Pommes de Terre au Lard</a></p></td></tr><tr><td align='center'><p><a href='recette-medaillon-de-porc-en-chemise-rayee-et-chapeau-parmentier-18130.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-medaillon-de-porc-en-chemise-rayee-et-chapeau-parmentier-18130.html'>Médaillon de Porc en Chemise Rayée et Chapeau Parmentier</a></p></td></tr><tr><td align='center'><p><a href='recette-baeckeoffe-plat-alsacien-17351.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-baeckeoffe-plat-alsacien-17351.html'>Baëckeoffe (Plat Alsacien)</a></p></td></tr><tr><td align='center'><p><a href='recette-filet-mignon-a-la-creme-d-ail-20519.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-filet-mignon-a-la-creme-d-ail-20519.html'>Filet Mignon à la Crème d'Ail</a></p></td></tr><tr><td align='center'><p><a href='recette-filet-mignon-a-la-mirabelle-17007.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-filet-mignon-a-la-mirabelle-17007.html'>Filet Mignon à la Mirabelle</a></p></td></tr><tr><td align='center'><p><a href='recette-chou-braise-aux-saucisses-8650.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-chou-braise-aux-saucisses-8650.html'>Chou braisé aux saucisses</a></p></td></tr><tr><td align='center'><p><a href='recette-saute-de-porc-au-curry-et-aux-pommes-semoule-aux-raisins-secs-35469.html'><img src='../imgs/contenu/ico_recette_fiche.gif'></a></p></td><td><p>&nbsp;&nbsp;<a href='recette-saute-de-porc-au-curry-et-aux-pommes-semoule-aux-raisins-secs-35469.html'>Sauté de Porc au Curry et aux Pommes, Semoule aux Raisins Secs</a></p></td></tr>					</table>
+					<br />
+					<h4><a href='http://www.iterroir.fr/cuisine' target='_blank' style='color:#E72D5F;font-size:16px'>Consultez également la rubrique "à table" de <span style='font-weight:bold'>iTerroir</span></a></h4>
+					<table>
+						<tr>
+							<td><p><img src='../imgs/contenu/ico_folder_close.png'></p></td><td><p>&nbsp;&nbsp;<a href="http://www.iterroir.fr/cuisine/recettes" target='_blank'>Recettes gourmandes</a></p></td>
+						</tr>
+						<tr>
+							<td><p><img src='../imgs/contenu/ico_folder_close.png'></p></td><td><p>&nbsp;&nbsp;<a href="http://www.iterroir.fr/cuisine/recettes/astuces" target='_blank'>Astuces culinaires</a></p></td>
+						</tr>
+						<tr>
+							<td><p><img src='../imgs/contenu/ico_folder_close.png'></p></td><td><p>&nbsp;&nbsp;<a href="http://www.iterroir.fr/cuisine/amenagement" target='_blank'>Idées d’aménagement pour votre cuisine</a></p></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		</div>
+		<div id="FIN-CONTENU"></div>
+	
+  </div>
+  
+    	<div id="PIED">
+  		<p style='color:#888888'>Tous droits réservés certiferme.com ¤ <a style='color:#888888' href="http://www.certiferme.com/contact.php">Mentions légales ¤ Conditions Générales d'Utilisation</a>
+  		<br />Le Village certiferme fait partie de la communauté des villages intégrant le village <a style='color:#888888;text-decoration:underline' href="http://www.fermadour.com" target='_blank'>www.fermadour.com</a>
+  		<br />Ce site a été développé par <a style='color:#888888;text-decoration:underline' href="http://www.yieloo.com" target="_blank">Yieloo</a> avec les technologies <a style='color:#888888;text-decoration:underline' href="http://www.intraknow.com" target="_blank">Intra'Know</a></p>
+  	</div>
+  	<br />
+		<script type="text/javascript">
+  		var _gaq = _gaq || [];
+  		_gaq.push(['_setAccount', 'UA-15799577-1']);
+  		_gaq.push(['_setAllowAnchor', true]);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+	</script>
+	<!-- <script type="text/javascript" src="http://ads.ayads.co/ajs.php?zid=395"></script> -->
+		<p style='clear:right'>&nbsp;</p>
+</div>
+<div id="dropin" style="position:absolute;visibility:hidden;top:125;z-index:100"></div>
+</body>
+</html>
