@@ -1,2 +1,2 @@
-Modification done using Git Bash for deployment task.
+Modification done using Git Bash
 
